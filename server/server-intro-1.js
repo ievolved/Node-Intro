@@ -2,10 +2,12 @@
 var http = require("http");
 
 
-var server = http.createServer(function (request, response) {
-    console.log("request at: " + request.method + " url: " + request.url);
-    response.end("Hello");
+var server = module.exports = http.createServer(function (request, response) {
+  console.log(request.method + " " + request.url);
+  response.end("Hello");
 });
 
-server.listen(3000);
-console.log("Server running at http://127.0.0.1:3000/");
+var port = process.env.PORT || 3000;
+server.listen(port);
+
+console.log("Server running at http://127.0.0.1:" + port + "/");
