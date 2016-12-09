@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Introduction to NodeJS.",
   "main": "server/server.js",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=4.0"
+  },
   "scripts": {
     "test": "echo \"Error: Must run each test individually or it will fail.\" && exit 1",
     "start": "nodemon ./server/server-intro-4.js"
